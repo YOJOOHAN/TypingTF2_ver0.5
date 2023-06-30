@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>TypingTF2</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- オーディオ設定 -->
+    <audio id=prairie4 src="audio/PerituneMaterial_Prairie4_loop.mp3"></audio>
+    <audio id="AM" src="audio/2_23_AM.mp3"></audio>
+    <audio id="typeSE" src="audio/kachi05.wav"></audio>
+    <audio id="boom" src="audio/bom31_a.wav"></audio>
+    <audio id="damage" src="audio/hit_p01_c.wav"></audio>
+    <audio id="power" src="audio/power14.wav"></audio>
+    <audio id="cursor" src="audio/cursor32.wav"></audio>
+    <audio id="wah" src="audio/wah.mp3"></audio>
+    <audio id="push51" src="audio/push51_c.wav"></audio>
+    <audio id="pyoro57" src="audio/pyoro57_b.wav"></audio>
+    <audio id="missSE" src="audio/buble03.wav"></audio>
+    <audio id="specialSE" src="audio/power32.wav"></audio>
+    <audio id="guardSE" src="audio/hit_p06.wav"></audio>
+
+    <!-- 画面レイアウト ロード中-->
+     <div id="loading">
+       <div id="loadingText">読み込み中…</div>
+       <img src="img/glayBack.png" id="preImage">
+     </div>
+      
+     
+     <!-- 画面レイアウト　枠とフラッシュ -->
+     <img id="main1" src="img/waku.png">
+     <div id="flash"></div>
+     <div id="flashWhite"></div>
+     <div id="greyScreen"></div>
+     
+     <div id="goFlash"></div>
+
+     <img id="main2" src="img/glayBack.png">
+     <img id="mainMes" src="img/waku2.png">
+
+     <!-- 画面レイアウト　タイトル画面　枠の内側 -->
+      
+     <div id="bigContainer2"> 
+        <img id="tytle" src="img/tytle.png">
+        <div id="version">ver_0.50</div>
+        <div id="bigContainer3">
+          <div class="smallContainer2">
+            <div id="story">テストプレイ</div>
+            <div id="story2">ステージセレクト（未）</div>
+            <div id="option">オプション</div>
+            <div id="credit">クレジット（未）</div>
+          </div>
+        </div>
+     </div>
+
+      <!-- 画面レイアウト　オプション画面　枠の内側 -->
+      <div id="bigContainer">
+        <div id="messageBox">
+          <section>メッセージ速度を確認できます。</section>
+        </div>
+        
+        <img id="sala" src="img/salaCut.png">       
+        <div class="smallContainer">
+          <div>BGM</div>
+          <div>　　</div>
+          <input type="range" id="bgmBar"/>
+          <div>　</div>
+          <div id="bgmNum">50</div>
+        </div>
+        
+        <div class="smallContainer">
+          <div>SE</div>
+          <div>　　　</div>
+          <input type="range" id="seBar"/>
+          <div>　</div>
+          <div id="seNum">50</div>
+        </div>
+        
+        <div class="smallContainer">
+          <div>メッセージ速度</div>
+          <div>　　　</div>
+          <div id="speedNormal" class="speed">普通</div>
+          <div id="speedFast" class="speed">速い</div>
+          <div id="speedFastest" class="speed">最速</div>
+        </div>
+        <div class="smallContainer">
+          <div>難易度</div>
+          <div>　　　　　　　</div>
+          <div id="difficultyEasy" class="difficulty">イージー</div>
+          <div id="difficultyNormal" class="difficulty">ノーマル</div>
+        </div>
+        
+        <div id="return">戻る</div>
+        
+      </div>
+  
+      <!-- 画面レイアウト　戦闘 -->
+      <div id="bigContainer4">
+        <img id="defeat" src="img/blank.png">
+        <img id="victory" src="img/blank.png">
+        <img id="ready" src="img/ready.png">
+        <img id="go" src="img/go.png">
+
+        <img id="explosion" src="img/blank.png">
+        <img id="explosion2" src="img/blank.png">
+        <img id="explosion3" src="img/blank.png">
+        
+        
+        <img id="hitMark" src="img/blank.png">
+        <img id="hitMark2" src="img/blank.png">
+        <img id="hitMark3" src="img/blank.png">
+        <img id="fireShoot" src="img/blank.png">
+        <img id="fireShoot2" src="img/blank.png">
+        <img id="fireShoot3" src="img/blank.png">
+        <div id="fireBox"></div>
+        <div id="damageBox"></div>
+        
+
+        
+        <img id="fightFace_kip" src="img/fightFace_kip.png">
+        <img id="fightFace_enemy" src="img/fightFace_warg.png">
+        <div id="kipName">キップ</div>
+        <div id="enemyName">ワーグ</div>
+        <div id="stage">Stage1</div>
+        <img id="kipHP" src="img/HP.png">
+        <img id="kipSP" src="img/SP.png">
+        <img id="enemyHP" src="img/HP.png">
+        <img id="enemySP" src="img/SP.png">
+        <img id="timeGauge" src="img/timeGauge.png">
+        <p id="typeText">canine</p>
+        <p id="translation">ケイナイン：名）形）イヌ。イヌ科の…</p>
+
+        <img id="kipStill" src="img/kipStill.png">      
+        <img id="wargStill" src="img/wargStill.png">      
+        
+        <img id="gauge" src="img/gauge_waku.png">
+        <div id="greyScreen3"></div>
+        <img id="waku_fight" src="img/waku_fight.png">
+        <div id="zoomContainer">
+          <img id="warg_dash1" src="img/warg_dash.png">
+          <img id="warg_dash2" src="img/warg_dash.png">
+          <img id="warg_dash3" src="img/warg_dash.png">
+          <img id="warg_dash4" src="img/warg_dash.png">
+          <img id="warg_dash6" src="img/warg_dash.png">
+         
+          <div id="greyScreen2"></div>
+          
+          
+          <img id="forest" src="img/forest2.png">
+          <img id="kipFighting" src="img/kip_standing.png">
+          <img id="wargFighting" src="img/warg_standing.png">
+        </div>
+        
+      </div>
+   
+   
+    
+
+    <script src="js/main.js"></script>
+  
+  </body>
+</html>
